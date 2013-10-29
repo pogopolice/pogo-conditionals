@@ -5,8 +5,8 @@ class conditionals::out {
     default => "This is an unknown box (out selector test)",
   }
 
-  file { '/tmp/os' :
-    ensure = file,
+  file { '/tmp/os':
+    ensure => file,
     content => $text,
   }
 }
