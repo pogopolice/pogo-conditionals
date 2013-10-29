@@ -43,8 +43,5 @@ class conditionals::in {
       'debian' => "This is a debian box. (in selector test)\n",
       default => "This is an unknown box. (in selector test)\n",
     },
-    }
   }
-
-
 }
