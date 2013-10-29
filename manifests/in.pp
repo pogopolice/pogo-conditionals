@@ -35,7 +35,16 @@
 #
 # Copyright 2013 Your name here, unless otherwise noted.
 #
-class conditionals {
+class conditionals::in {
+  file { '/tmp/os':
+    ensure => file,
+    content => $::operatingsystem ? {
+      'centos' => "This is a centos box. (in selector test)\n",
+      'debian' => "This is a debian box. (in selector test)\n",
+      default => "This is an unknown box. (in selector test)\n",
+    },
+    }
+  }
 
 
 }
